@@ -1,0 +1,315 @@
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+.image-uploader-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+/* Server Status */
+.server-status {
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.server-status.online {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.server-status.checking {
+    background-color: #fff8e1;
+    color: #ff8f00;
+}
+
+.server-status.offline {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+.refresh-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-left: 10px;
+}
+
+/* Upload Section */
+.upload-section {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.dropzone {
+    border: 2px dashed #ccc;
+    border-radius: 5px;
+    padding: 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-bottom: 20px;
+}
+
+.dropzone:hover {
+    border-color: #2196f3;
+    background-color: #f8f9fa;
+}
+
+.dropzone-icon {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.file-requirements {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 5px;
+}
+
+.file-preview {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.file-info {
+    text-align: left;
+}
+
+.change-file-btn {
+    background: #f44336;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.change-file-btn:hover {
+    background: #d32f2f;
+}
+
+/* Noise Settings */
+.noise-settings {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.noise-settings h3 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+.setting-group {
+    margin: 15px 0;
+}
+
+.setting-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.checkbox-label input {
+    margin-right: 10px;
+}
+
+/* Buttons */
+.upload-button {
+    background: #2196f3;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.upload-button:hover {
+    background: #1976d2;
+}
+
+.upload-button:disabled {
+    background: #b0bec5;
+    cursor: not-allowed;
+}
+
+.spinner {
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 2px solid white;
+    width: 16px;
+    height: 16px;
+    animation: spin 1s linear infinite;
+    margin-right: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Results */
+.results-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .results-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.image-container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-container h3 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+.preview-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+    margin: 0 auto;
+}
+
+.image-meta {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.download-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 15px;
+    background: #4caf50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.download-link:hover {
+    background: #388e3c;
+}
+
+/* Comparison View */
+.comparison-toggle {
+    display: flex;
+    align-items: center;
+    font-size: 0.9em;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.comparison-toggle input {
+    margin-right: 5px;
+}
+
+.image-comparison {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-comparison.active {
+    height: 400px;
+}
+
+.comparison-view {
+    position: relative;
+}
+
+.comparison-original {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    border-right: 2px solid white;
+}
+
+/* Error Messages */
+.error-message {
+    background: #ffebee;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+    color: #c62828;
+}
+
+.error-message h3 {
+    margin-top: 0;
+}
+
+.setup-instructions {
+    margin-top: 15px;
+    padding: 15px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.setup-instructions code {
+    background: #f5f5f5;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-family: monospace;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .upload-section {
+        padding: 15px;
+    }
+    
+    .dropzone {
+        padding: 20px;
+    }
+}
