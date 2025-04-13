@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Deep Noise Removal System for Image, Audio, and Video using Autoencoders with React-based User Interface
 
 ## Project Overview
@@ -12,3 +13,6 @@ noise-removal-system/
 ├── samples/              # Test images/audio/videos
 ├── report/               # Final PDF report
 └── README.md
+=======
+# ai-noise-remover
+>>>>>>> 09163f590efaf05e679fe67981f5c4ff6d314bfd
