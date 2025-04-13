@@ -25,3 +25,12 @@ Thumbs.db
 
 # Log files
 *.log
+
+# Node and Python
+node_modules/
+venv/
+
+# Data or cache
+train_data/
+__pycache__/
+*.pyc
